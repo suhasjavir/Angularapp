@@ -1,0 +1,15 @@
+<h2>**Using Clik Event**</h2>
+<button (click)="onButtonClick()">Click Me</button>
+<p>current count is: {{count}}</p>
+
+<h2>**Using Key Up Event**</h2>
+<input type="text" (keyup)="onKeyUp($event)"> 
+<br><br>
+<h2>**Two way databinding**</h2>
+<input type="text" [(ngModel)] = "firstName">
+{{firstName}}
+<br>
+<h2>** OutPut Decorator **</h2>
+<button (click) = "sendToParent()">Click me, for child to parent(@Output decorator)</button>
+<br><br>
+<button class="btn btn-primary" (click) = "objsendToParent()">Click me2, for Obj child to parent(@Ouptput decorator)</button>

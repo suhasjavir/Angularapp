@@ -1,0 +1,30 @@
+<p>demopostdetails works!</p>
+<div>
+    <div>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>UserId</th>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>body</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{userpost.userId}}</td>
+                        <td>{{userpost.id}}</td>
+                        <td>{{userpost.title}}</td>
+                        <td>{{userpost.body}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <button class="btn btn-primary mt-2 ms-5"><a routerLink="/post" class="nav-link"> Back to Post</a></button>
+    
+    <!-- <a (click)="BackToParent()"  class="btn btn-primary">Back to Post</a> 
+    
+    unother way to back to parent page usting function--> 
+</div>

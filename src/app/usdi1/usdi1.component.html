@@ -1,0 +1,18 @@
+<p>usdi1 works!</p>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">usdi1 component 1</h5>
+        <p>{{message}}</p>
+
+        <p>Bellow the Object data comming from Service</p>
+        <ng-container *ngFor="let product of products">
+            Product Name: <strong class="text-success">{{product.name}}</strong>&nbsp;&nbsp;&nbsp;
+            Product Id: <strong class="text-success">{{product.id}}</strong><br>
+        </ng-container>
+
+        <!-- <p>{{product}}</p> -->
+        <br><br>
+        <button (click)="btnClick()" class="btn btn-success">Show message from service</button>
+        <p class="card-text">If you click on button, message alert shows on browser form service</p>
+    </div>
+</div>

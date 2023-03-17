@@ -1,0 +1,14 @@
+<div style="margin-left: 50px;" *ngIf="showMe; else elseBlock">
+    <div *ngFor="let p of posts">
+        <div>{{p.title}}</div>
+        <div>
+            <img *ngIf="p.imageUrl; else noImage" width="200px" [src]="p.imageUrl" alt="This is nature Image">
+        <ng-template #noImage> <p>Image not available</p> </ng-template>
+        </div>
+        <div>{{p.content}}</div>
+    </div>
+</div>
+
+<ng-template #elseBlock>
+    <p>Content not available</p>
+</ng-template>

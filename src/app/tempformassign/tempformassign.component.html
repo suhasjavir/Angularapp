@@ -1,0 +1,81 @@
+<p>tempformassign works!</p>
+<div  class="background-color">
+<div class="container">
+    <div class="row justify-content-center" >
+    <div class="col-md-4 rounded shadow">
+        <div class="card">
+<mat-card class="registration-page">
+      <mat-card-title>Template-Driven Assignment</mat-card-title>
+    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" width="200" alt="Photo of a Shiba Inu"> -->
+    <mat-card-content>
+        <form class="registration-form" #regestrationForm="ngForm">
+            <mat-form-field>
+            <input matInput type="text" name="firstname" ngModel #firstname="ngModel" required  minlength="5" maxlength="10" placeholder="First Name">
+            
+            <mat-error *ngIf="firstname.errors?.required">The firstname is mandatory</mat-error>
+                <mat-error *ngIf="firstname.errors?.minlength">
+                  enter atleast 5 chars, you entered {{firstname.errors?.minlength.actualLength}}
+                  <!-- your firstname must have minimum {{firstname.errors?.minlength.requiredLength}} chars,
+                  but it only has {{firstname.errors?.minlength.actualLength}}. -->
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="text" name="lastname" ngModel #lastname="ngModel" required minlength="3" maxlength="10" placeholder="Last Name"> 
+                <mat-error *ngIf="lastname.errors?.required">The lastname is mandatory</mat-error>
+                <mat-error *ngIf="lastname.errors?.minlength">
+                  your lastname have maximum 10 {{lastname.errors?.minlength.requiredLength}} chars,
+                  but it only has {{lastname.errors?.maxlength.actualLength}}.
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="number" name="age" ngModel #age="ngModel" required placeholder="Age" (change)="checkAge(age)">
+                <mat-error *ngIf="age.errors?.required">The age is mandatory</mat-error>
+                <!-- <mat-error *ngIf="isAgeValid">Enter age between 17 - 20 years.</mat-error> -->
+                <small *ngIf="isAgeValid">Enter age between 17 - 20 years.</small>
+            </mat-form-field>
+            
+            <mat-form-field>
+                <input matInput type="email" name="email" ngModel #email="ngModel" required email placeholder="Email">
+                <mat-error *ngIf="email.errors?.required">The Email is mandatory</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="tel" name="phoneno" ngModel #phoneno="ngModel" required maxlength="10" placeholder="Phone number"> 
+                <mat-error *ngIf="phoneno.errors?.required">The phoneno is mandatory</mat-error>
+                <mat-error *ngIf="phoneno.errors?.minlength">
+                    your phone have maximum 10 {{phoneno.errors?.minlength.requiredLength}} chars,
+                    but it only has {{phoneno.errors?.maxlength.actualLength}}.
+                  </mat-error>
+            </mat-form-field><br/>
+            Select your city:
+            <select class="form-control" name="city" [ngModel]="defaultValue">
+                <option *ngFor="let city of cities" value="{{city}}">{{city}}</option>
+            </select>
+            <br>
+              <mat-radio-group name="gender">
+                Gender:&nbsp;&nbsp; <mat-radio-button value="male" checked="true">Male</mat-radio-button>&nbsp;&nbsp;
+                <mat-radio-button value="female">Female</mat-radio-button>
+              </mat-radio-group>
+              <mat-form-field>
+                <input matInput type="password" name="password" ngModel #password="ngModel" required password placeholder="Enter Password">
+                <mat-error *ngIf="password.errors?.required">Please Enter Password</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="password" (blur)="comferm(password, conform)" name="conform" ngModel #conform="ngModel" required conform placeholder="Conform Password">
+                <!-- <mat-error *ngIf="conform.comferm?.isMatch">Please Enter Correct Password</mat-error> -->
+                <small *ngIf="isMatch">entered password is not matched</small>
+            </mat-form-field>
+            <section>
+                <div class="example-button-row">
+                <button mat-raised-button color="primary" (click)="submit(regestrationForm)">Submit</button>
+                </div>
+                <div *ngIf="isSubmitted"></div>
+              </section>
+</form>
+    </mat-card-content>
+  </mat-card>
+
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,9 @@
+<p>agecalculator works!</p>
+
+<div class="text-center"><input type="date" [(ngModel)]="age"></div>
+<br>
+<div class="text-center"><button class="btn btn-primary" (click)="agecalculator()">Calculate age</button></div>
+<br>
+<p *ngIf="age" class="text-center">{{showAge}}</p>
+<!-- <br> -->
+<!-- <p>{{print()}}</p> -->

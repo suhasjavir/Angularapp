@@ -1,0 +1,14 @@
+<p>uscomp4 works!</p>
+<div class="box">
+    Employee Name: <strong>{{employeeName}}</strong>
+    <br>
+    <input type="text" placeholder="Enter employee name" #ename>
+    <br>
+    Employee Id: <strong>{{employeeId}}</strong>
+    <br>
+    <input type="number" placeholder="Enter employee id" #emid>
+    <br>
+    <br>
+    
+    <button class="btn btn-primary ms-2"  (click)="upadateUserName(ename, emid)">Update Info</button>
+</div>

@@ -1,0 +1,50 @@
+<p>usshttp4 works!</p>
+
+
+<table class="table">
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Street</th>
+            <th>Suit</th>
+            <th>City</th>
+            <th>Zipcode</th>
+            <th>Latiyude</th>
+            <th>Langitude</th>
+            <th>Phone</th>
+            <th>Website</th>
+            <th>name</th>
+            <th>catchPhrase</th>
+            <th>bs</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of objproducts">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.username}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.address.street}}</td>
+            <td>{{emp.address.suite}}</td>
+            <td>{{emp.address.city}}</td>
+            <td>{{emp.address.zipcode}}</td>
+            <td>{{emp.address.geo.lat}}</td>
+            <td>{{emp.address.geo.lng}}</td>
+            <td>{{emp.phone}}</td>
+            <td>{{emp.website}}</td>
+            <td>{{emp.company.name}}</td>
+            <td>{{emp.company.catchPhrase}}</td>
+            <td>{{emp.company.bs}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<!-- <ng-container *ngFor="let product of objproducts">
+    Employee Code: <strong class="text-success"> {{product.id}}</strong>, &nbsp;&nbsp;&nbsp;&nbsp; 
+    Employee Name: <strong class="text-success"> {{product.name}}</strong>  <br>
+</ng-container> -->

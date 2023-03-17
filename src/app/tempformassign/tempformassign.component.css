@@ -1,0 +1,19 @@
+
+.registration-page {
+    max-width: 350px;
+    margin: 10px auto 5px auto;
+}
+
+.registration-form{
+    display: flex;
+    flex-direction: column;
+}
+.background-color{
+    background-color:antiquewhite;
+
+    /* background-image: url(https://pngtree.com/freebackground/business-form-city-technology-synthesis-background_1319184.html); */
+}
+
+.bg-color{
+    background-color:black;
+}

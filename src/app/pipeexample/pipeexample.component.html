@@ -1,0 +1,26 @@
+<p>pipeexample works!</p>
+<div>
+    <p><strong>Applying Date pipes</strong></p>
+    Todays Date: <strong> {{todaysDate}}</strong></div>
+<div>Todays Date ( | date) : <strong>{{todaysDate | date}}</strong></div>
+<div>Todays Date ( | date: 'shortDate'): <strong>{{todaysDate | date: 'shortDate'}}</strong></div>
+<div>Todays Date ( | date: 'fullDate'): <strong>{{todaysDate | date: 'fullDate'}}</strong></div>
+<div>Todays Date ( | date: 'MM/dd/yyyy'): <strong>{{todaysDate | date: 'MM/dd/yyyy'}}</strong></div>
+<div>Todays Date ( | date: 'hh:mm'): <strong>{{todaysDate | date: 'hh:mm'}}</strong></div><br>
+<p><strong>Applying multiple\chained\combination pipes</strong></p>
+<div>Todays Date ( | date: 'fullDate' | uppercase): <strong>{{todaysDate | date: 'fullDate' | uppercase}}</strong></div>
+<div>Todays Date ( | date: 'fullDate' | lowercase): <strong>{{todaysDate | date: 'fullDate' | lowercase}}</strong></div><br>
+<p><strong>Applying currency pipes</strong></p>
+<div>Price ( | currency: 'INR') : <strong>{{price | currency: 'INR'}}</strong></div>
+<div>Price ( | currency: 'USD') : <strong>{{price | currency: 'USD'}}</strong></div>
+<div>Price ( | currency: 'EUR') : <strong>{{price | currency: 'EUR'}}</strong></div><br>
+<div>
+    <p><strong>Json Pipe</strong></p>
+    <p>to show object values on browser <strong> (object name | json) </strong> in string interpolation.</p>
+    <p>{{employee | json}}</p>
+</div>
+
+<div>
+<p>Custom pipe Example</p>
+<p>{{countLength | custom}}</p>
+</div>

@@ -1,0 +1,66 @@
+<p>customerlist works!</p>
+
+
+<h2>News table</h2>
+
+  <div>
+<div class="col-md-12">
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>UUID</th>
+                        <th>Title</th>
+                        <th>Publisher</th>
+                        <th>Publish Time</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let news of newsData.news">
+                        <td>{{news.uuid}}</td>
+                        <td>{{news.title}}</td>
+                        <td>{{news.publisher}}</td>
+                        <td>{{news.providerPublishTime}}</td>
+                        <td>{{news.type}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div>
+  <div>
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th>Exchange</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Symbol</th>
+            <th>Index</th>
+            <th>Score</th>
+            <th>L Name</th>
+            <th>Sector</th>
+            <th>Industry</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let quotes of newsData.quotes">
+            <td>{{quotes.exchange}}</td>
+            <td>{{quotes.shortname}}</td>
+            <td>{{quotes.quoteType}}</td>
+            <td>{{quotes.symbol}}</td>
+            <td>{{quotes.index}}</td>
+            <td>{{quotes.score}}</td>
+            <td>{{quotes.longname}}</td>
+            <td>{{quotes.sector}}</td>
+            <td>{{quotes.industry}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

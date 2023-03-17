@@ -1,0 +1,12 @@
+
+table, th, td, tr {
+    border: 1px solid black;
+
+    }
+th{
+    background-color: aquamarine;
+}
+
+tr{
+    background-color:antiquewhite;
+}
