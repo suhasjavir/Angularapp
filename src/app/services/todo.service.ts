@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { url } from 'inspector';
+import { observable, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -22,4 +23,19 @@ export class TodoService {
   list(){
     return this.httpClient.get(this.apiUrl)
   }
+
+  //update
+
+  update(id: any, data: any){
+    let API_URL = `${this.apiUrl}/${id}`
+    return this.httpClient.put(API_URL, data);
+  }
+
+  // delete
+
+  delete(id: any){
+    let API_URL =`${this.apiUrl}/${id}`
+    return this.httpClient.delete(API_URL);
+  }
+
 }

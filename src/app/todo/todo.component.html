@@ -15,6 +15,7 @@
             <tr *ngFor="let todo of todoList">
                 <td>{{todo.id}}</td>
                 <td>{{todo.title}}</td>
+                <td><button class="btn btn-link" (click)="editTodo(todo)">Edit</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-danger"  (click)="deleteTodo(todo.id)">Delete</button></td>
             </tr>
         </tbody>
     </table>

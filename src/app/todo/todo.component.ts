@@ -38,4 +38,21 @@ export class TodoComponent implements OnInit {
       console.log(error);
     }))
   }
+
+  editTodo(todo: any){
+    let editData = {
+      id: new Date().getTime(),
+      title: 'Edited Title'
+    }
+    this.todoService.update(todo.id, editData).subscribe(res => {
+      this.listToDos();
+    }) 
+  }
+
+  deleteTodo(id: any){
+    this.todoService.delete(id).subscribe(res => {
+      console.log('Record has been deleted');
+      this.listToDos();
+    })
+  }
 }
