@@ -1,0 +1,20 @@
+<p>serchapi works!</p>
+
+<input class="ms-5" type="text" #serchdata> 
+<button class="btn btn-success ms-3" (click)="searchApi(serchdata)">Search</button>
+<table class="table ms-5">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Word Count</th>
+            <th>Snippet</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let x of apiData.query?.search">
+            <td>{{x.title}}</td>
+            <td>{{x.wordcount}}</td>
+            <td>{{x.snippet}}</td>
+        </tr>
+    </tbody>
+</table>

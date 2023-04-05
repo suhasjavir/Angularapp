@@ -86,6 +86,12 @@ import { FashionModule } from './fashion/fashion.module';
 import { AdminModule } from './admin/admin.module';
 import { CustomerModule } from './customer/customer.module';
 import { TodoComponent } from './todo/todo.component';
+import { Usscrud1Component } from './usscrud1/usscrud1.component';
+import { Usscrud1Service } from './services/usscrud1.service';
+import { SerchapiComponent } from './serchapi/serchapi.component';
+import { CartloginComponent } from './cartlogin/cartlogin.component';
+import { CartshopingComponent } from './cartshoping/cartshoping.component';
+import { CartlistComponent } from './cartshoping/cartlist/cartlist.component';
 // import { HttpobservComponent } from './httpobserv/httpobserv.component';
 
 @NgModule({
@@ -136,7 +142,12 @@ import { TodoComponent } from './todo/todo.component';
     DemocommentComponent,
     DemocommentdetailsComponent,
     UserderoutingComponent,
-    TodoComponent  
+    TodoComponent,
+    Usscrud1Component,
+    SerchapiComponent,
+    CartloginComponent,
+    CartshopingComponent,
+    CartlistComponent  
     // HttpobservComponent
     
   ],
@@ -174,7 +185,7 @@ import { TodoComponent } from './todo/todo.component';
     OrdersModule,
     FashionModule
   ],
-  providers: [MyserviceService, DesignutilityService, NewserviceService, PostService, UserService, CommentService],
+  providers: [MyserviceService, DesignutilityService, Usscrud1Service, NewserviceService, PostService, UserService, CommentService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

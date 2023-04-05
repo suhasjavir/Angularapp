@@ -29,7 +29,6 @@ export class HomepageComponent implements OnInit {
       map(x => x + 1)
     ).subscribe(res => {
       console.log('Obs of', res);
-      
     })
   }
 

@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { AdminlistComponent } from './admin/adminlist/adminlist.component';
+import { CartloginComponent } from './cartlogin/cartlogin.component';
+import { CartlistComponent } from './cartshoping/cartlist/cartlist.component';
+import { CartshopingComponent } from './cartshoping/cartshoping.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { CustomerlistComponent } from './customer/customerlist/customerlist.component';
 import { DemocommentComponent } from './democomment/democomment.component';
@@ -21,11 +24,13 @@ import { LaptopComponent } from './product/laptop/laptop.component';
 import { MobileComponent } from './product/mobile/mobile.component';
 import { ProductComponent } from './product/product.component';
 import { WatchComponent } from './product/watch/watch.component';
+import { SerchapiComponent } from './serchapi/serchapi.component';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { TodoComponent } from './todo/todo.component';
 import { UserdatailsComponent } from './userdatails/userdatails.component';
 import { UserderoutingComponent } from './userderouting/userderouting.component';
 import { UserpostComponent } from './userpost/userpost.component';
+import { Usscrud1Component } from './usscrud1/usscrud1.component';
 
 
 const routes: Routes = [
@@ -63,8 +68,18 @@ const routes: Routes = [
   // {path: 'customer', component: CustomerlistComponent},
   // {path: 'admin', component: AdminlistComponent},
   { path: 'todo', component: TodoComponent},
-  {path: 'customer', loadChildren: './customer/customer.module#CustomerModule'},
-  {path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
+  { path: 'customer', loadChildren: './customer/customer.module#CustomerModule'},
+  { path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
+  { path: 'usscrud1', component: Usscrud1Component},
+  { path: 'serchapi', component: SerchapiComponent},
+  { path: 'cartlogin', component: CartloginComponent},
+  { path: 'cartshoping',
+  children:[
+    { path:'', component:CartshopingComponent},
+    { path:'cartlist', component:CartlistComponent}
+
+  ]
+  },
   { path: '**', component: PagenotfoundComponent}
 ];
 

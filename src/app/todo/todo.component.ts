@@ -8,6 +8,8 @@ import { TodoService } from '../services/todo.service';
 })
 export class TodoComponent implements OnInit {
 
+  // json-server --watch ./src/app/data.json
+  // please run above json server link in new terminal to run application properly.
   todoList: any =[];
   //DI
   constructor(private todoService: TodoService) { }

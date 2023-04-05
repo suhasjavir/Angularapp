@@ -1,0 +1,62 @@
+<p>cartlogin works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Angular Reactive Form</h3>
+                </div>
+                <div class="card-body">
+                    <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" class="form-control" formControlName="email" id="email" placeholder="Please Enter Email here">
+                            <small class="text-danger" *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched"> Please enter valid email </small>
+                            <!-- <span class="text-danger"
+                                *ngIf="(loginForm.email.touched || submitted) && loginForm.email.errors?.required">
+                                Email is required
+                            </span>
+                            <span class="text-danger"
+                                *ngIf="loginForm.email.touched && loginForm.email.errors?.email">
+                                Enter a valid email address
+                            </span> -->
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" formControlName="password" id="password" placeholder="Enter Password Here">
+                            <small class="text-danger" *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">Please enter valid Password</small>
+                            <!-- <span class="text-danger"
+                                *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
+                                Password is required
+                            </span>
+                            <span class="text-danger"
+                                *ngIf="registerFormControl.password.touched && registerFormControl.password.errors?.invalidPassword">
+                                Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+                                letter and 1 number
+                            </span> -->
+                        </div>
+                        <!-- <div class="form-group">
+                            <label>Confirm Password</label>
+                            <input type="password" class="form-control" formControlName="confirmPassword">
+                            <span class="text-danger"
+                                *ngIf="(registerFormControl.confirmPassword.touched || submitted)&& registerFormControl.confirmPassword.errors?.required">
+                                Confirm Password is required
+                            </span>
+                            <span class="text-danger"
+                                *ngIf="registerFormControl.confirmPassword.touched && registerFormControl.confirmPassword.errors?.passwordMismatch">
+                                Passwords doesnot match
+                            </span>
+                        </div> -->
+                        <br/>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success" (click)="login(loginForm)">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
