@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-templateform',
   templateUrl: './templateform.component.html',
   styleUrls: ['./templateform.component.css']
 })
 export class TemplateformComponent implements OnInit {
-
+  isEmailValid: boolean = false;
   isSubmitted: boolean = false;
   formData  = {
     email: '',
@@ -20,12 +19,8 @@ export class TemplateformComponent implements OnInit {
   defaultGender = 'Male';
   courses: string[] = ['Angular', 'Javascript', 'Typescript'];
   genders = [ 
-    {
-      id: '1', value: 'Male'
-    },
-    {
-      id: '2', value: 'Female'
-    }
+    { id: '1', value: 'Male' },
+    { id: '2', value: 'Female' }
   ]
   emails='';
   constructor(private route: Router) { }
@@ -53,5 +48,15 @@ form.controls['gender'].patchValue('Male');
 
   }
 
-  
+  checkemail(email){
+    console.log(email.value);
+    const domain = email.value.substring(email.value.lastIndexOf('@') + 1);  // it is for value, after the @.
+    if(domain.toLowerCase() === 'codemindtechnology.com')
+    {
+      this.isEmailValid=false;
+    } else
+    {
+      this.isEmailValid=true;
+    }
+  }
 }

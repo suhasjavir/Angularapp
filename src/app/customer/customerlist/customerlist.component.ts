@@ -17,5 +17,5 @@ export class CustomerlistComponent implements OnInit {
       this.newsData = res;
     })
   }
-
+ 
 }

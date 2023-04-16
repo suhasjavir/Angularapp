@@ -92,6 +92,8 @@ import { SerchapiComponent } from './serchapi/serchapi.component';
 import { CartloginComponent } from './cartlogin/cartlogin.component';
 import { CartshopingComponent } from './cartshoping/cartshoping.component';
 import { CartlistComponent } from './cartshoping/cartlist/cartlist.component';
+import { ReactformnewComponent } from './reactformnew/reactformnew.component';
+import { AuthloginComponent } from './authlogin/authlogin.component';
 // import { HttpobservComponent } from './httpobserv/httpobserv.component';
 
 @NgModule({
@@ -147,7 +149,9 @@ import { CartlistComponent } from './cartshoping/cartlist/cartlist.component';
     SerchapiComponent,
     CartloginComponent,
     CartshopingComponent,
-    CartlistComponent  
+    CartlistComponent,
+    ReactformnewComponent,
+    AuthloginComponent  
     // HttpobservComponent
     
   ],

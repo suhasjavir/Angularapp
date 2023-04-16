@@ -31,6 +31,8 @@ import { UserdatailsComponent } from './userdatails/userdatails.component';
 import { UserderoutingComponent } from './userderouting/userderouting.component';
 import { UserpostComponent } from './userpost/userpost.component';
 import { Usscrud1Component } from './usscrud1/usscrud1.component';
+import { AuthloginComponent } from './authlogin/authlogin.component';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
@@ -39,7 +41,7 @@ const routes: Routes = [
   { path: 'aboutus', component: AboutusComponent }, // http://localhost:4200/aboutus
   { path: 'contactus', component: ContactusComponent },
   // { path: 'product', // this code for single <router-outlet> 
-  { path: 'product', component: ProductComponent,  // this code for multiple <router-outlet>
+  { path: 'product', canActivate:[AuthGuard], component: ProductComponent,  // this code for multiple <router-outlet>
   children: [
     // { path:'', component: ProductComponent}, // this code for single <router-outlet> 
     { path:'laptop', component:LaptopComponent},
@@ -55,6 +57,7 @@ const routes: Routes = [
   { path: 'comment', component: DemocommentComponent},
   { path: 'commentdetails/:id', component: DemocommentdetailsComponent},
   { path: 'userderouting', component: UserderoutingComponent},
+  { path: 'authlogin', component: AuthloginComponent},
   { path: 'login', component: TemplateformComponent},
   { path: 'order', component: OrderlistComponent},
   { path: 'fashion',
