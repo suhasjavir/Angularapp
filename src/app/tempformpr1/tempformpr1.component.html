@@ -1,0 +1,26 @@
+<p>tempformpr1 works!  From "Code step by step" Template form and validation</p>
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="form-bg col-md-4 rounded shadow">
+            <br><h3>Login Form <sup>(Template form)</sup></h3><br>
+<form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm)">
+    <div class="form-group">
+    <input type="text" class="form-control" pattern="[a-zA-Z]+$" placeholder="Enter Username" name="username" username required ngModel
+    #username="ngModel" >
+    <span *ngIf="username.touched && !username.valid" style="color:red;">Please enter valid username</span>
+</div>
+    <br>
+    <div class="form-group">
+    <input type="password" class="form-control" #password="ngModel" minlength="5" placeholder="Enter password" 
+    name="password" required ngModel>
+        <span *ngIf="password.invalid && password.touched" style="color: red;">Please enter valid password</span>
+</div><br>
+<div class="align-center">
+    <button type="submit" class="btn btn-success" id="login" [disabled]="loginForm.invalid">Login</button>
+</div><br>
+</form>
+</div>
+</div>
+</div>

@@ -1,0 +1,31 @@
+<p>tempformpr works! From "SohoSoft" Template form and validation</p>
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="form-bg col-md-4 rounded shadow">
+            <form #regform="ngForm" (ngSubmit)="Register(regform)">
+                <br><h2 class="text-center">Registration Form</h2>
+                <br>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="First Name" name="firstname" required ngModel>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Last Name" name="lastname" required ngModel>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Email" name="email" email required ngModel
+                    #email="ngModel">
+                    <span class="help-bpx" *ngIf="email.touched && !email.valid">Please enter valid Email</span>
+                </div>
+                <br>
+                <div class="align-center">
+                    <button type="submit" class="btn btn-primary" id="Register"  [disabled]="!regform.valid"> Register</button>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
+</div>

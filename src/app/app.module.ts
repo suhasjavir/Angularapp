@@ -61,7 +61,6 @@ import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
 import { Comp3Component } from './comp3/comp3.component';
 import { Comp4Component } from './comp4/comp4.component';
-
 import { Uscomp2Component } from './uscomp2/uscomp2.component';
 import { Uscomp3Component } from './uscomp3/uscomp3.component';
 import { Uscomp4Component } from './uscomp4/uscomp4.component';
@@ -94,6 +93,12 @@ import { CartshopingComponent } from './cartshoping/cartshoping.component';
 import { CartlistComponent } from './cartshoping/cartlist/cartlist.component';
 import { ReactformnewComponent } from './reactformnew/reactformnew.component';
 import { AuthloginComponent } from './authlogin/authlogin.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { TempformprComponent } from './tempformpr/tempformpr.component';
+import { Tempformpr1Component } from './tempformpr1/tempformpr1.component';
+import { TempformuxprComponent } from './tempformuxpr/tempformuxpr.component';
+import { ReactsohoComponent } from './reactsoho/reactsoho.component';
+import { ReactanilsComponent } from './reactanils/reactanils.component';
 // import { HttpobservComponent } from './httpobserv/httpobserv.component';
 
 @NgModule({
@@ -151,7 +156,13 @@ import { AuthloginComponent } from './authlogin/authlogin.component';
     CartshopingComponent,
     CartlistComponent,
     ReactformnewComponent,
-    AuthloginComponent  
+    AuthloginComponent,
+    HooksComponent,
+    TempformprComponent,
+    Tempformpr1Component,
+    TempformuxprComponent,
+    ReactsohoComponent,
+    ReactanilsComponent  
     // HttpobservComponent
     
   ],

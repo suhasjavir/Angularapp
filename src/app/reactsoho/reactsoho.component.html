@@ -1,0 +1,19 @@
+<p>reactsoho works!</p>
+
+<form [formGroup]="signUpForm" (ngSubmit)="signupUser(signUpForm)">
+    <input type="text" placeholder="Enter first name" formControlName="firstName"><br>
+    <small class="text-danger" *ngIf="signUpForm.get('firstName')?.invalid && signUpForm.get('firstName')?.touched">Please enter valid firstname</small>
+    <br>
+    <input type="text" placeholder="Enter last name" formControlName="lastName"><br>
+    <small class="text-danger" *ngIf="signUpForm.get('lastName')?.invalid && signUpForm.get('lastName')?.touched">Please enter valid lastname</small>
+    <br>
+    <input type="text" placeholder="Enter Email Id" formControlName="email"><br>
+    <small class="text-danger" *ngIf="signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched">Please enter valid email</small>
+    <br>
+    <input type="password" placeholder="Enter password" formControlName="password"><br>
+    <small class="text-danger" *ngIf="signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched">Please enter valid password</small>
+    <br>
+    <button class="btn btn-success" [disabled]="signUpForm.invalid">Sign Up</button>
+    <br><br>
+    <button type="button" class="btn btn-primary" (click)="setValue()">Set Value</button>
+</form> 

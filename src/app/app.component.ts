@@ -8,6 +8,7 @@ import { Employee } from './models/employee';
 })
 export class AppComponent implements OnInit {
   
+  data1: string = 'green';
   parentToChild: string = `I am coming from parent(@input decorator "parent to child")`;
   posts = [
     {

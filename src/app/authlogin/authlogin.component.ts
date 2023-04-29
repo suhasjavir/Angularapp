@@ -13,8 +13,8 @@ export class AuthloginComponent implements OnInit {
 
   ngOnInit() {
   }
-  login(username, passsword){
-    var result = this.authService.checkUser(username, passsword);
+  login(username, password){
+    var result = this.authService.checkUser(username, password);
     if(result == true){
       this.route.navigate(['/product']);
     } else{
