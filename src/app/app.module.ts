@@ -99,6 +99,8 @@ import { Tempformpr1Component } from './tempformpr1/tempformpr1.component';
 import { TempformuxprComponent } from './tempformuxpr/tempformuxpr.component';
 import { ReactsohoComponent } from './reactsoho/reactsoho.component';
 import { ReactanilsComponent } from './reactanils/reactanils.component';
+import { ReactformuxComponent } from './reactformux/reactformux.component';
+import { Reactformux1Component } from './reactformux1/reactformux1.component';
 // import { HttpobservComponent } from './httpobserv/httpobserv.component';
 
 @NgModule({
@@ -162,7 +164,9 @@ import { ReactanilsComponent } from './reactanils/reactanils.component';
     Tempformpr1Component,
     TempformuxprComponent,
     ReactsohoComponent,
-    ReactanilsComponent  
+    ReactanilsComponent,
+    ReactformuxComponent,
+    Reactformux1Component
     // HttpobservComponent
     
   ],

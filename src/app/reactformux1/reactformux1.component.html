@@ -1,0 +1,48 @@
+<p>reactformux1 works!</p>
+<div class="page-area bg-pink">
+    <div class="row justify-content-center">
+        <div class="col-md-4 bg-white text-left py-4 rounded shadow">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div formGroupName="userDetails">
+                    <div class="form-group">
+                        <label for="username">User Name: <small class="text-success">(Custom validaton using error codes)</small> </label>
+                        <input type="text" class="form-control" placeholder="Enter UserName" formControlName="username">
+                        <small class="text-danger" *ngIf="loginForm.get('userDetails.username')?.invalid && loginForm.get('userDetails.username')?.touched">
+                           <span *ngIf="loginForm.get('userDetails.username').errors['required']"> Username is not valid</span>
+                           <span *ngIf="loginForm.get('userDetails.username').errors['nameIsNotAllowed']">{{loginForm.get('userDetails.username').value}} Username is not allowed</span>
+                        </small>
+                    </div>
+                    <div class="form-group py-2">
+                        <label for="">Email: <small class="text-success">(Costom validation using costom async validator)</small> </label>
+                        <input type="text" class="form-control" placeholder="Enter Email" formControlName="email">
+                        <small class="text-danger" *ngIf="loginForm.get('userDetails.email')?.invalid && loginForm.get('userDetails.email')?.touched">Please enter valid email</small>
+                    </div>
+                </div>
+                <div class="form-group py-1">
+                    <label for="">Course:</label>
+                    <select name="" id="" class="form-control" formControlName="course">
+                        <option value="Angular">Angular</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="TypeScript">TypeScript</option>
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+                <div class="form-group py-1">
+                    <label for="">Gender:</label>
+                        <div class="custom-control custom-radio" *ngFor="let gender of genders">
+                            <input type="radio" formControlName="gender" value="{{gender.genderType}}">
+                            <label for="" class="ms-2">{{gender.genderType}}</label>
+                        </div>
+            </div>
+            <div class="form-group" formArrayName="skills">
+                <label for="">Add Skills: <small class="text-success">(Example of FormArray with dynamically validations)</small></label>
+                    <ng-container *ngFor="let skill of loginForm.get('skills').controls; index as i">
+                        <input type="text" class="form-control mt-2" formControlName="{{i}}" placeholder="Add Skills">
+                    </ng-container>
+                <button class="btn btn-light btn-sm mt-2 btn-add" (click)="onAddSkills()"> <i>+</i> Add Skills</button>
+            </div>
+                <button class="btn btn-primary mt-3">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

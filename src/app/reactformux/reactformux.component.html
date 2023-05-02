@@ -1,0 +1,23 @@
+<p>reactformux works!</p>
+<h4 class="text-success">This is normal reactive form without using any bootstrap classes</h4>
+<form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+        <label>User Name:</label>
+        <input type="text" formControlName="username" placeholder="Enter Username">
+    <br><br>
+        <label>Email: </label>
+        <input type="text" formControlName="email" placeholder="Enter Email">
+    <br><br>
+        <label>Course:</label>
+        <select formControlName="course">
+            <option>Angular</option>
+            <option> JavaScript</option>
+            <option>HTML</option>
+        </select>
+    <br>
+    <div *ngFor="let gender of genders" >
+        <input type="radio" formControlName="gender"
+        value="{{gender.genderType}}">
+        <label class="ms-2 mt-1">{{gender.genderType}}</label>
+    </div>
+    <button class="mt-2">Submit</button>
+</form>
