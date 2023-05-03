@@ -1,0 +1,13 @@
+<p class="rounded shadow">z7uxservicedi2 works!</p>
+
+<h2 class="text-success">Biyani Technology Kolhapur</h2>
+<div class="mt-4">Vacancies for <span class="text-danger">"{{position}}"</span></div>
+<div class="mt-2">Candidates hiring on 5 lakh lpa</div>
+<div>
+<button class="btn btn-primary mt-4 mb-4" (click)="onClick()">Apply for post</button>
+</div>
+
+
+<ng-container *ngFor="let emp of selectedEmp">
+    Employee Name: {{emp.empName}}, Employee Salary: {{emp.empSal}}<br>
+</ng-container>

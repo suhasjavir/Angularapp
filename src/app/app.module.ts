@@ -101,6 +101,9 @@ import { ReactsohoComponent } from './reactsoho/reactsoho.component';
 import { ReactanilsComponent } from './reactanils/reactanils.component';
 import { ReactformuxComponent } from './reactformux/reactformux.component';
 import { Reactformux1Component } from './reactformux1/reactformux1.component';
+import { Z7uxservicedi1Component } from './z7uxservicedi1/z7uxservicedi1.component';
+import { Z7uxservicedi2Component } from './z7uxservicedi2/z7uxservicedi2.component';
+import { ZuxdidesignutilityService } from './services/zuxdidesignutility.service';
 // import { HttpobservComponent } from './httpobserv/httpobserv.component';
 
 @NgModule({
@@ -166,7 +169,9 @@ import { Reactformux1Component } from './reactformux1/reactformux1.component';
     ReactsohoComponent,
     ReactanilsComponent,
     ReactformuxComponent,
-    Reactformux1Component
+    Reactformux1Component,
+    Z7uxservicedi1Component,
+    Z7uxservicedi2Component
     // HttpobservComponent
     
   ],
@@ -204,7 +209,8 @@ import { Reactformux1Component } from './reactformux1/reactformux1.component';
     OrdersModule,
     FashionModule
   ],
-  providers: [MyserviceService, DesignutilityService, Usscrud1Service, NewserviceService, PostService, UserService, CommentService],
+  providers: [MyserviceService, DesignutilityService, Usscrud1Service, NewserviceService, PostService,
+   UserService, CommentService, ZuxdidesignutilityService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
