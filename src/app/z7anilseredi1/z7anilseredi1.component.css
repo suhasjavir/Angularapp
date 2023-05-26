@@ -1,0 +1,8 @@
+.footer {
+    position:relative;
+    bottom: 0;
+    background-color: cyan;
+    padding: 5px;
+    width: 99%;
+    color: darkorchid;
+}

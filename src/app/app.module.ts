@@ -110,6 +110,9 @@ import { ZsohodiemployeeService } from './services/zsohodiemployee.service';
 import { Z7anilservivedi1Component } from './z7anilservivedi1/z7anilservivedi1.component';
 import { Z7anilservivedi2Component } from './z7anilservivedi2/z7anilservivedi2.component';
 import { ZanilservicediService } from './services/zanilservicedi.service';
+import { Z7anilseredi1Component } from './z7anilseredi1/z7anilseredi1.component';
+import { Z7anilseredi2Component } from './z7anilseredi2/z7anilseredi2.component';
+import { ZuxhttpclientandobservableComponent } from './zuxhttpclientandobservable/zuxhttpclientandobservable.component';
 // import { HttpobservComponent } from './httpobserv/httpobserv.component';
 
 @NgModule({
@@ -181,7 +184,10 @@ import { ZanilservicediService } from './services/zanilservicedi.service';
     Z7sohoservicedi1Component,
     Z7sohoservicedi2Component,
     Z7anilservivedi1Component,
-    Z7anilservivedi2Component
+    Z7anilservivedi2Component,
+    Z7anilseredi1Component,
+    Z7anilseredi2Component,
+    ZuxhttpclientandobservableComponent
     // HttpobservComponent
     
   ],
