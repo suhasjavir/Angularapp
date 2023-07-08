@@ -17,7 +17,7 @@ export class Usscrud1Component implements OnInit {
     // {id: 'p2', name: 'Mobile', price: 17500},
     // {id: 'p3', name: 'Watch', price: 12000},
     // {id: 'p4', name: 'Fridge', price: 32000}
-  ]
+  ];
 
   onAddProduct(id, name, price){
     this.products.push({
